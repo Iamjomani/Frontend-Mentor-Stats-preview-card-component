@@ -1,0 +1,154 @@
+html{
+    font-family: "Inter", sans-serif;
+    font-family: "Lexend Deca", sans-serif;
+}
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: hsl(233, 47%, 7%);
+    color: hsl(0, 0%, 100%);
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.card{
+    width: min(90%, 360px);
+    background-color: hsl(244, 37%, 16%);
+}
+
+.image-block{
+    position: relative;
+}
+
+.image-block img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.image-block .dk-img{
+    display: none;
+}
+
+.overlay{
+    position: absolute;
+    inset: 0;
+    background-color: hsl(277, 64%, 61%);
+    mix-blend-mode: multiply;
+}
+
+.text-block{
+    text-align: center;
+    margin-block: 2rem;
+    padding-inline: 1.5rem;
+}
+
+.accent{
+    color: hsl(277, 64%, 61%);
+}
+
+.heading{
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: hsl(0, 0%, 100%);
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+}
+
+.description{
+    color: hsla(0, 0%, 100%, 0.75);
+    margin-bottom: 1.5rem;
+    max-width: 30ch;
+    margin-inline: auto;
+    line-height: 1.6;
+    font-size: 0.925rem;
+    letter-spacing: 0.01em;
+}
+
+.stats{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-transform: uppercase;
+}
+
+.stats h2{
+    margin-bottom: 0.2rem;
+    font-family: "Inter", sans-serif;
+    letter-spacing: 0.05em;
+}
+
+.stat p{
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+    color: hsla(0, 0%, 100%, 0.6);
+}
+
+footer{
+    background-color: hsl(244, 37%, 16%);
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width:768px){
+
+    .card{
+        width: 900px;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .text-block, .image-block{
+        width: 50%;
+    }
+
+    .image-block .mob-img{
+    display: none;
+    }
+
+    .image-block .dk-img{
+    display: block;
+    }
+
+    .text-block {
+        text-align: left;
+        padding: 3rem;
+        margin-block: 0;
+    }
+
+    .heading{
+        margin-bottom: 1.5rem;
+    }
+
+    .description{
+        margin-inline: 0;
+        max-width: 100%;
+        font-size: 0.9rem;
+        margin-block-end: 3rem;
+    }
+
+    .stats{
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    
+}
+
+
+
+
